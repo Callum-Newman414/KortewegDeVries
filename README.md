@@ -13,6 +13,10 @@ $$ \frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} + \delta^2\fra
 
 This equation is the KdV equation that the function that I have written evolves in time. Here, the changes of variables are $x = r - ct$ and $u = \alpha\eta$. These variables represent a change of basis such that the frame now being considered is moving at speed $c$, which would be the speed of the wave with no non-linear or dispersive terms.
 
+![Solition Simulation](results_figures/kdv_delta_t_002_0.png)
+
+*Figure 1: The initial shape of the wave, and the shape that the wave is expected to keep throughout*
+
 ## Results
 |   $\Delta t$ | Max Amplitude Change   |
 |-------------:|:-----------------------|
@@ -24,4 +28,7 @@ This equation is the KdV equation that the function that I have written evolves 
 |       0.05   | 58173941.260%          |
 
 This table displays the change in the amplitude of the wave after a second of runtime. As the initial condition is an exact solution, it should retain its shape during the entire evolution. Since the program encountered an overflow error at $\Delta t = 0.005$, and we can safely disregard the last result, then the critical time step can be assumed to be $\Delta t = 0.001$. 
-![Soliton Simulation](results_figures)
+
+![Soliton Simulation Breakdown](results_figures/kdv_delta_t_0045.png)
+
+*Figure 2: Breakdown of the soliton wave when close to the critical value, using $\Delta t = 0.005$ here*
